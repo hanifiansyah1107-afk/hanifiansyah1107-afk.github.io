@@ -20,20 +20,20 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #141414; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #f6f8fb; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ffffff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #fbf8f8; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #fbf8f8;  /* The default color of the main navmenu links */
-  --nav-hover-color:#808080; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #47b2e4; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #fbf8f8; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #47b2e4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -45,10 +45,10 @@
 }
 
 .dark-background {
-  --background-color: #051b48;
+  --background-color: #37517e;
   --default-color: #ffffff;
-  --heading-color:   #fbf8f8; 
- --surface-color: #4668a2;
+  --heading-color: #ffffff;
+  --surface-color: #4668a2;
   --contrast-color: #ffffff;
 }
 
@@ -143,9 +143,9 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #1c5acd;
-  --heading-color: #991d1d;
-  color:#fbf8f8;
+  --background-color: #3d4d6a;
+  --heading-color: #ffffff;
+  color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
   transition: all 0.5s;
@@ -165,7 +165,7 @@ h6 {
   font-size: 30px;
   margin: 0;
   font-weight: 500;
-  color:#fbf8f8;
+  color: var(--heading-color);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -173,7 +173,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: #444444;
+  background: var(--accent-color);
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
@@ -183,7 +183,7 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: #757575;
+  color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
@@ -208,14 +208,13 @@ h6 {
 .index-page .header {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
-  --nav-color: #fbf8f8;
+  --nav-color: #ffffff;
 }
 
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(248, 248, 248, 1);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  --background-color: rgba(40, 58, 90, 0.9);
 }
 
 /*--------------------------------------------------------------
@@ -812,7 +811,6 @@ section,
   padding-bottom: 20px;
   text-transform: uppercase;
   position: relative;
-  color: #444444;
 }
 
 .section-title h2:before {
@@ -855,10 +853,6 @@ section,
   padding: 120px 0 60px 0;
   display: flex;
   align-items: center;
-background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aesop-Neve-Studios28-1920x1280.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -866,12 +860,10 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #fbf8f8;
 }
 
-
 .hero p {
-  color: #fbf8f8;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
   font-size: 22px;
   line-height: 1.3;
@@ -880,7 +872,7 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: #444444;
+  background: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 15px;
@@ -892,7 +884,7 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 }
 
 .hero .btn-get-started:hover {
-  color: #757575;
+  color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
@@ -993,7 +985,7 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 .about ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #444444;
+  color: var(--accent-color);
 }
 
 .about .read-more {
@@ -1037,7 +1029,6 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 .why-us .content h3 {
   font-weight: 400;
   font-size: 34px;
-  color: #141414;
 }
 
 .why-us .content p {
@@ -1067,13 +1058,13 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 }
 
 .why-us .faq-container .faq-item h3 span {
-  color: #141414;
+  color: var(--accent-color);
   padding-right: 5px;
   font-weight: 600;
 }
 
 .why-us .faq-container .faq-item h3:hover {
-  color: #141414;
+  color: var(--accent-color);
 }
 
 .why-us .faq-container .faq-item .faq-content {
@@ -1114,7 +1105,7 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 }
 
 .why-us .faq-container .faq-active h3 {
-  color: #141414;
+  color: var(--accent-color);
 }
 
 .why-us .faq-container .faq-active .faq-content {
@@ -1201,87 +1192,16 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .service-item1{
-  background-image: url('../img/skincare.jpg');
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
+.services .service-item {
+  background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
-   width: 300px;  
-    height: 350px;
-  border-radius: 18px;
+  height: 100%;
 }
-
-.services .service-item2 {
-  background-image: url('../img/hand-and-body.jpg');
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
- width: 300px;  
-    height: 350px;
-  border-radius: 18px;
-}
-
-.services .service-item3 {
-  background-image: url('../img/fragrance.jpg');
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
- width: 300px;  
-    height: 350px;
-  border-radius: 18px;
-}
-
-.services .service-item4 {
-  background-image: url('../img/home.jpg');
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
- width: 300px;  
-    height: 350px;
-  border-radius: 18px;
-}
-
-
 
 .services .service-item .icon {
   margin-bottom: 10px;
-  
 }
 
 .services .service-item .icon i {
@@ -1297,7 +1217,7 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 }
 
 .services .service-item h4 a {
-  color: #444444;
+  color: var(--heading-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -1307,20 +1227,12 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
   margin-bottom: 0;
 }
 
-.services .service-item1:hover {
-  transform: translateY(-10px);
-}
-
-.services .service-item2:hover {
-  transform: translateY(-10px);
-}
-
-.services .service-item3:hover {
+.services .service-item:hover {
   transform: translateY(-10px);
 }
 
 .services .service-item:hover h4 a {
-  color: #808080;
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -1681,7 +1593,6 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
-  color: #444444;
 }
 
 .team .team-member span {
@@ -1761,68 +1672,22 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing .pricing-item {
-  background-image: url('../img/Aesop_Category_Bundle_The_Resurrection_Duo_Web_PDP_2000x2000px.png');
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
-  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid var(--background-color);
-  padding: 60px 40px;
- height: 100%;
-  border-radius: 5px;
-}
-.pricing .pricing-item2 {
-  background-image: url('../img/Aesop_Touch_of_Brilliance_Virtual_Bundle_2000x2000px.png') ;
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
+  background-color: var(--surface-color);
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
   border-top: 4px solid var(--background-color);
   padding: 60px 40px;
   height: 100%;
   border-radius: 5px;
 }
-
-.pricing .pricing-item3 {
-  background-image: url('../img/Solais_2026_PDP_Solais_Replenishing_Hand_Serum_50mL_NGL_Front_2000x2000px.jpg') ;
-    
-    /* 2. Memastikan gambar menutupi seluruh kotak */
-    background-size: cover;
-    
-    /* 3. Posisikan gambar di tengah */
-    background-position: center;
-    
-    /* 4. Mencegah gambar berulang jika lebih kecil dari kotak */
-    background-repeat: no-repeat;
-  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid var(--background-color);
-  padding: 60px 40px;
-  height: 100%;
-  border-radius: 5px;
-}
-
 
 .pricing h3 {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 20px;
-  color: #141414;
 }
 
 .pricing h4 {
-  color: #141414;
+  color: var(--accent-color);
   font-size: 48px;
   font-weight: 400;
   font-family: var(--heading-font);
@@ -1881,7 +1746,6 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
   font-family: var(--heading-font);
   transition: 0.3s;
   border: 1px solid var(--accent-color);
-  margin-top: 15px;
 }
 
 .pricing .buy-btn:hover {
@@ -1893,8 +1757,8 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
   border-top-color: var(--accent-color);
 }
 
-.pricing .buy-btn {
-  background: #444444;
+.pricing .featured .buy-btn {
+  background: var(--accent-color);
   color: var(--contrast-color);
 }
 
@@ -2300,7 +2164,6 @@ background-image: url('../img/Cosmetics-Product-Photography-Studio-in-London-Aes
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #141414;
 }
 
 .contact .info-item p {
